@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générer un contrat de maintenance | SAVOIR PLUS CONSEIL</title>
+  <meta name="description" content="Générez un contrat de maintenance informatique adapté au nombre de machines de votre organisation.">
+  <link rel="icon" href="assets/LOGO/Logo savplus v1.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contract-shell{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .contract-form{background:var(--blue-50);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px}
+    .contract-form label{display:grid;gap:6px;font-weight:700;font-size:14px}
+    .contract-form input,.contract-form select{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;font:inherit;color:var(--ink);background:#fff}
+    .contract-form input:focus,.contract-form select:focus{outline:none;border-color:var(--blue-700);box-shadow:0 0 0 3px var(--blue-100)}
+    .contract-form .form-grid{display:grid;gap:16px;margin-top:18px}
+    .contract-form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .contract-form .btn-wide{margin-top:20px}
+    .contract-form .hint{font-size:13px;color:var(--gray-600)}
+    .contract-preview{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:8px;box-shadow:var(--shadow-sm)}
+    .contract-empty{border:2px dashed var(--border);border-radius:var(--radius-lg);padding:56px 28px;text-align:center;color:var(--gray-600)}
+    .contract-empty h3{color:var(--ink);margin:0 0 8px}
+    @media(max-width:900px){.contract-shell{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="logo.webp" alt="SAV PLUS CONSEIL — Centre d'examen habilité ICDL"></a>
+    <nav id="siteNav">
+      <a href="index.html#top">Accueil</a>
+      <a href="index.html#services">Nos services</a>
+      <a href="index.html#methode">Notre méthode</a>
+      <a href="maintenance.html" aria-current="page">Contrat</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="siteNav"><span></span></button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
+
+<main>
+<section class="page-hero with-photo" style="--bg:url('assets/images/page-hero-contract.jpg')">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="index.html#top">Accueil</a><span>/</span><a href="index.html#services">Nos services</a><span>/</span><span>Contrat de maintenance</span></div>
+    <div class="eyebrow">CONTRAT DE MAINTENANCE</div>
+    <h1>Générez votre contrat de maintenance informatique.</h1>
+    <p>Renseignez quelques informations sur votre organisation et le nombre de machines concernées : un contrat d'exemple est généré immédiatement.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contract-shell">
+      <div>
+        <div class="eyebrow">VOS INFORMATIONS</div>
+        <h2>Le point de départ : le nombre de machines.</h2>
+        <p>Le nombre de machines détermine le périmètre du contrat de maintenance préventive, corrective et évolutive de votre parc.</p>
+        <form class="contract-form" id="contractForm">
+          <div class="form-grid">
+            <label>Entreprise ou organisation <input type="text" name="company" required placeholder="SAVOIR PLUS CONSEIL"></label>
+            <div class="row">
+              <label>Nom du contact <input type="text" name="contact" required placeholder="Prénom NOM"></label>
+              <label>Email <input type="email" name="email" required placeholder="contact@entreprise.bj"></label>
+            </div>
+            <div class="row">
+              <label>Téléphone <input type="tel" name="phone" placeholder="+229 ..."></label>
+              <label>Nombre de machines <input type="number" name="machines" required min="1" placeholder="10"></label>
+            </div>
+            <label>Adresse <input type="text" name="address" placeholder="Ville, quartier..."></label>
+            <button class="btn btn-primary btn-wide" type="submit">Générer le contrat</button>
+            <p class="hint">Aperçu généré localement, sans engagement. Un modèle définitif vous sera transmis par notre équipe.</p>
+          </div>
+        </form>
+      </div>
+      <div>
+        <div class="eyebrow">VOTRE CONTRAT</div>
+        <h2>Aperçu du contrat.</h2>
+        <div id="contractPreview" class="contract-preview">
+          <div class="contract-empty">
+            <h3>Aucun contrat généré</h3>
+            <p>Remplissez le formulaire pour obtenir un aperçu de votre contrat de maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col footer-identity">
+      <a class="footer-brand" href="index.html"><img class="footer-logo" src="logo.webp" alt="SAV+"></a>
+      <p class="footer-tagline">Maintenance informatique</p>
+      <p class="footer-sub">Cabinet de conseil et formation en transformation digitale</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-title">À propos de SAV+</h4>
+      <p class="footer-stat">Cabinet agréé par l'État béninois<br>Décision N°038/MTFP/DC/SGM/DGRCE/DGARCE/DPAEAESP/SEIRH/SA</p>
+      <p class="footer-meta">RCCM : RB/ABC/21A33122<br>IFU : 0202011965243</p>
+    </div>
+    <div class="footer-col footer-links">
+      <h4 class="footer-title">Liens utiles</h4>
+      <a href="index.html#top">Accueil</a>
+      <a href="index.html#services">Nos services</a>
+      <a href="index.html#methode">Notre méthode</a>
+      <a href="maintenance.html">Contrat de maintenance</a>
+      <a href="mailto:contact@savplus.net">Nous contacter</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4 class="footer-title">Nous contacter</h4>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>08 BP 0053<br>Cotonou, BÉNIN</span></p>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2290169416666">(+229) 69 41 66 66</a></p>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:contact@savplus.net">contact@savplus.net</a></p>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://savplus.net/" target="_blank" rel="noopener">www.savplus.net</a></p>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="container footer-base-inner">
+      <span>© 2026 SAVOIR PLUS CONSEIL</span>
+      <span>Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const form = document.getElementById('contractForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(form));
+  const preview = document.getElementById('contractPreview');
+  preview.innerHTML = buildContract(data);
+});
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function buildContract(d) {
+  const company = esc(d.company) || 'L’entreprise';
+  const contact = esc(d.contact) || 'Le contact';
+  const email = esc(d.email) || 'contact@entreprise.bj';
+  const phone = esc(d.phone) || '—';
+  const machines = esc(d.machines) || '1';
+  const address = esc(d.address) || '—';
+  const ref = 'CDT-' + Date.now().toString().slice(-6);
+  const today = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  return `
+  <div class="contract-print"><button class="btn btn-primary" onclick="window.print()">Imprimer / PDF</button></div>
+  <div class="contract-doc" id="contractDoc">
+    <div class="contract-letterhead">
+      <img src="assets/LOGO/Logo savplus v1.png" alt="SAV+">
+      <div>
+        <h3>CONTRAT DE MAINTENANCE INFORMATIQUE</h3>
+        <p class="contract-meta">Référence : ${ref} · Établi le ${today}</p>
+      </div>
+    </div>
+    <p class="contract-parties"><strong>Client</strong> : ${company}<br>Contact : ${contact} · ${email} · ${phone}<br>Adresse : ${address}</p>
+    <p><strong>Prestataire</strong> : SAVOIR PLUS CONSEIL — Cabinet de conseil et formation en transformation digitale · RCCM : RB/ABC/21A33122 · IFU : 0202011965243 · 08 BP 0053, Cotonou, Bénin</p>
+    <h4>Objet</h4>
+    <p>Le présent contrat couvre un parc de <strong>${machines} machine(s)</strong>, avec les services de maintenance informatique suivants :</p>
+    <ul>
+      <li><strong>Maintenance préventive</strong> : mises à jour des systèmes et logiciels, sauvegardes planifiées et externes, nettoyage et optimisation, audits réguliers.</li>
+      <li><strong>Maintenance corrective</strong> : assistance helpdesk, télémaintenance, dépannage sur site et désinfection.</li>
+      <li><strong>Maintenance évolutive</strong> : conseil en renouvellement, optimisation et performance (RAM, SSD, cloud).</li>
+    </ul>
+    <h4>Durée</h4>
+    <p>12 mois à compter de la signature, renouvelable par tacite reconduction.</p>
+    <h4>Conditions</h4>
+    <p>Détails de tarification et d'intervention à définir selon le périmètre exact du parc. Ce document est un aperçu précontractuel.</p>
+    <p class="contract-sign"><strong>Le Client</strong> : ______________________ &nbsp;&nbsp;&nbsp; <strong>Le Prestataire</strong> : ______________________</p>
+    <style>
+      .contract-doc{font:13px/1.6 system-ui,sans-serif;color:var(--ink);padding:22px 24px;background:#fff;border-radius:14px}
+      .contract-letterhead{display:flex;align-items:center;gap:14px;padding-bottom:14px;margin-bottom:14px;border-bottom:2px solid var(--ink)}
+      .contract-letterhead img{height:40px;width:auto;flex:none}
+      .contract-doc h3{margin:0 0 4px;font-size:18px;letter-spacing:.02em}
+      .contract-meta{font-size:12px;color:var(--gray-600);margin:0 0 14px}
+      .contract-parties{margin:0 0 10px}
+      .contract-doc h4{margin:16px 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-700)}
+      .contract-doc ul{padding-left:20px;margin:0 0 14px}
+      .contract-sign{margin-top:26px;padding-top:14px;border-top:1px solid var(--border);font-size:13px}
+      .contract-print{display:flex;gap:10px;justify-content:flex-end;padding:6px 0;background:#fff}
+      @media print{.contract-shell .contract-form,.contract-print,.site-header,.footer-base{display:none}.contract-preview{padding:0;border:0}}
+    </style>
+  </div>`;
+}
+</script>
+</body>
+</html>

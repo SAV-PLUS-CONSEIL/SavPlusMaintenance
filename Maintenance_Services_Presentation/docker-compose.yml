@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    image: maintenance-web:${VERSION:-latest}
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8092}:3000"
