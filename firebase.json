@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "assets/API USEFULL",
+      "Maintenance_Services_Presentation/**",
+      "web/**",
+      "docker-compose.yml",
+      "logo_b64.txt",
+      "firebase-debug.log"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+}

@@ -8,3 +8,7 @@ Thumbs.db
 
 # Node (in case of local tooling)
 node_modules/
+
+# Firebase local cache
+.firebase/
+firebase-debug.log
