@@ -357,7 +357,7 @@ footer{background:#fff;border-top:1px solid var(--border);margin-top:64px}
 .check-list strong{color:var(--navy-900);display:inline}
 
 /* ---------- accreditation ---------- */
-.accredit-banner{display:flex;align-items:flex-start;gap:24px;background:linear-gradient(135deg,var(--navy-950),var(--navy-900));color:#fff;border-radius:var(--radius-lg);padding:32px 34px;margin-top:28px;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.accredit-banner{display:flex;align-items:flex-start;gap:24px;background:linear-gradient(135deg,rgba(4,4,20,.92),rgba(4,4,20,.88)),url("assets/images/motherboard-macro.jpg") center/cover no-repeat;color:#fff;border-radius:var(--radius-lg);padding:32px 34px;margin-top:28px;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 45px rgba(0,0,0,.35)}
 .accredit-seal{flex:none;width:80px;height:80px;border:3px solid var(--gold-500);border-radius:50%;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:900;line-height:1.15;letter-spacing:.04em;margin-top:2px}
 .accredit-banner h3{margin:0 0 6px;font-size:21px}
 .accredit-banner p{margin:0;font-size:14px;color:#c5cdd9}
