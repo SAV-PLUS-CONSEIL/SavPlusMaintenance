@@ -6,7 +6,7 @@
   <title>Générer un contrat de maintenance | SAVOIR PLUS CONSEIL</title>
   <meta name="description" content="Générez un contrat de maintenance informatique adapté au nombre de machines de votre organisation.">
   <link rel="icon" href="assets/LOGO/Logo savplus v1.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=anim-3">
   <style>
     .contract-shell{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
     .contract-form{background:var(--blue-50);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px}
@@ -31,7 +31,6 @@
       <a href="index.html#top">Accueil</a>
       <a href="index.html#services">Nos services</a>
       <a href="index.html#methode">Notre méthode</a>
-      <a href="maintenance.html" aria-current="page">Contrat</a>
       <a href="index.html#contact">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="siteNav"><span></span></button>
@@ -68,7 +67,7 @@
               <label>Nombre de machines <input type="number" name="machines" required min="1" placeholder="10"></label>
             </div>
             <label>Adresse <input type="text" name="address" placeholder="Ville, quartier..."></label>
-            <button class="btn btn-primary btn-wide" type="submit">Générer le contrat</button>
+            <a class="btn btn-primary btn-wide" href="index.html#contact">Nous contacter</a>
             <p class="hint">Aperçu généré localement, sans engagement. Un modèle définitif vous sera transmis par notre équipe.</p>
           </div>
         </form>
@@ -105,14 +104,13 @@
       <a href="index.html#top">Accueil</a>
       <a href="index.html#services">Nos services</a>
       <a href="index.html#methode">Notre méthode</a>
-      <a href="maintenance.html">Contrat de maintenance</a>
-      <a href="mailto:contact@savplus.net">Nous contacter</a>
+      <a href="index.html#contact">Nous contacter</a>
     </div>
     <div class="footer-col footer-contact">
       <h4 class="footer-title">Nous contacter</h4>
       <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>08 BP 0053<br>Cotonou, BÉNIN</span></p>
-      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2290169416666">(+229) 69 41 66 66</a></p>
-      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:contact@savplus.net">contact@savplus.net</a></p>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2290159910519">(+229) 01 59 91 05 19</a></p>
+      <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:maintenance@savplus.net">maintenance@savplus.net</a></p>
       <p class="footer-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://savplus.net/" target="_blank" rel="noopener">www.savplus.net</a></p>
     </div>
   </div>
@@ -124,7 +122,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=anim-3"></script>
 <script>
 const form = document.getElementById('contractForm');
 form.addEventListener('submit', (e) => {

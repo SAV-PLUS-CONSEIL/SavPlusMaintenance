@@ -414,3 +414,35 @@ footer{background:#fff;border-top:1px solid var(--border);margin-top:64px}
 /* liens texte : légère animation au survol */
 .text-link{display:inline-flex;align-items:center;gap:4px;transition:gap .2s ease,color .2s ease}
 .text-link:hover{gap:8px;color:var(--gold-600)}
+
+/* ---------- Animations : apparition au scroll ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .reveal,.reveal-auto{opacity:0;transform:translateY(30px) scale(.985);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1);transition-delay:var(--reveal-delay,0ms)}
+  .reveal.is-visible,.reveal-auto.is-visible{opacity:1;transform:none}
+  .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal-left.is-visible{opacity:1;transform:none}
+  .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal-right.is-visible{opacity:1;transform:none}
+  .reveal-stagger>*{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+  .reveal-stagger.is-visible>*{opacity:1;transform:none}
+  .reveal-group>*{transition-delay:var(--reveal-delay,0ms)}
+  .reveal-group:not(.is-visible)>*{opacity:0;transform:translateY(28px)}
+  .reveal-group.is-visible>*{opacity:1;transform:none}
+  .reveal-group>*{transition-property:opacity,transform;transition-duration:.64s;transition-timing-function:cubic-bezier(.16,1,.3,1)}
+  .hero-card.is-visible,.accredit-banner.is-visible,.cta-panel.is-visible{animation:soft-glow .9s ease both}
+  @keyframes soft-glow{
+    0%{box-shadow:0 12px 30px rgba(0,0,0,.1)}
+    100%{box-shadow:var(--shadow-md)}
+  }
+}
+
+.no-js .reveal,.no-js .reveal-left,.no-js .reveal-right,.no-js .reveal-auto,.no-js .reveal-stagger>*,.no-js .reveal-group>*{opacity:1!important;transform:none!important}
+
+.gallery-grid img{transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.gallery-grid img:hover{transform:scale(1.045)}
+.feature-row-media img{transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.feature-row-media:hover img{transform:scale(1.03)}
+.timeline-num{transition:transform .3s ease}
+.timeline-item:hover .timeline-num{transform:scale(1.1)}
+.footer-logo,.brand-logo{transition:transform .25s ease}
+.brand:hover .brand-logo{transform:scale(1.04)}
